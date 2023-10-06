@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title EX2 </title>
+</head>
+<body>
+    <input type="text" id="taskInput" placeholder="Digite uma tarefa">
+    <button onclick="addTask()">Adicionar</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            const taskText = document.getElementById("taskInput").value;
+            if (taskText.trim() !== "") {
+                const taskList = document.getElementById("taskList");
+                const taskItem = document.createElement("li");
+                taskItem.textContent = taskText;
+                taskList.appendChild(taskItem);
+                document.getElementById("taskInput").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

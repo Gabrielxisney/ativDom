@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> EEX5 </title>
+</head>
+<body>
+    <textarea id="textArea" placeholder="Digite uma frase ou paragrafo"></textarea>
+    <button onclick="countWords()">Contar Palavras</button>
+    <p>Numero de Palavras: <span id="wordCount">0</span></p>
+
+    <script>
+        function countWords() {
+            const text = document.getElementById("textArea").value;
+            const words = text.split(/\s+/).filter(word => word.trim() !== "");
+            document.getElementById("wordCount").textContent = words.length;
+        }
+    </script>
+</body>
+</html>
